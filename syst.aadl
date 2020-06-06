@@ -1,4 +1,46 @@
 package syst
 public
+
+system CropMaintananceSystem
+end CropMaintananceSystem;
+
+system implementation CropMaintananceSystem.with_devices
 	
+end CropMaintananceSystem.with_devices;
+
+
+
+
+device ApplicationServer
+end ApplicationServer;
+
+device implementation ApplicationServer.impl
+end ApplicationServer.impl;
+
+
+
+
+device DatabaseServer
+end DatabaseServer;
+
+device implementation DatabaseServer.impl
+end DatabaseServer.impl;
+
+
+
+
+device IOTDevice
+end IOTDevice;
+
+device implementation IOTDevice.impl
+end IOTDevice.impl;
+
+
+
+device Sensor
+end Sensor;
+
+device implementation Sensor.impl
+end Sensor.impl;
+
 end syst;
