@@ -19,19 +19,19 @@ end CropMaintananceSystem.with_devices;
 
 system IOTEmbeddedSystem
 end IOTEmbeddedSystem;
+
 system implementation IOTEmbeddedSystem.with_devices
 	subcomponents
 		iot_device: device IOTDevice;
 		moisture_sensor: device MoistureSensor;
 		ph_sensor: device PHSensor;
 		sensor_controller: process SensorController;
-		iot_processor: processor IOTProcessor;
-		bus_conn: bus HWConnection;
+		iot_processor: processor IOTProcessor.impl;
+		bus_conn: bus HWConnection.impl;
 	connections
 		sensor_controller_conn: port sensor_controller.push_sensor_data -> iot_device.get_data;
 		moisture_sensor_conn: port moisture_sensor.moisture_level_read -> sensor_controller.moisture_read;
 		ph_sensor_conn: port ph_sensor.ph_level_read -> sensor_controller.ph_read;
-		
 		iot_processor_bus: bus access bus_conn -> iot_processor.bus_access;
 		moisture_sensor_bus: bus access bus_conn -> moisture_sensor.bus_access;
 		ph_sensor_bus: bus access bus_conn -> ph_sensor.bus_access;	
@@ -41,6 +41,7 @@ end IOTEmbeddedSystem.with_devices;
 
 
 -- SERVER CONTROLLERS
+
 device ApplicationServer
 	features
 		iot_data_read: in event port;
