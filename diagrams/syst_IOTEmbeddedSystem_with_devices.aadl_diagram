@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="2aadebf9-04c6-4506-a838-e24cfa1cbfc0" manual="true">
+    <element uuid="bcc6071d-7df0-4cee-9d5a-1873ff7b1e34" manual="true">
+      <element uuid="c815d288-18bd-476a-b744-ada3a0a9fb96" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>iot_device_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="948.0" y="462.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="3c698d36-938f-4dbe-821a-be269e106644" manual="true">
+      <element uuid="1ed670ac-3c1f-41bd-bc9a-3f52d6e22537" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>iot_processor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="758.0" y="515.0"/>
+        <point x="758.0" y="582.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="b2332d82-e2f3-4b3a-b3ac-c91bddb96324" manual="true">
+      <element uuid="81263d3f-16b9-4761-bc87-7306acdc7b5e" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>moisture_sensor_bus</seg>
+      </bo>
+      <bendpoints>
+        <point x="427.0" y="462.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="12f84403-3f91-43bb-9dec-67cf6bb86ff3" manual="true">
+      <element uuid="f1e91f9e-0d7b-4a5c-b364-b2c26e27d0af" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>moisture_sensor_conn</seg>
+      </bo>
+    </element>
+    <element uuid="229a9a9e-25fb-4b94-acd2-77fe9f7972fe" manual="true">
+      <element uuid="5ca7ec12-b7e2-4f0b-9ec7-2fe09a395a77" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>ph_sensor_bus</seg>
+      </bo>
+    </element>
+    <element uuid="e6f1af52-65c3-47ea-9049-2ce6bfdae825" manual="true">
+      <element uuid="9d8ad07f-ccbb-4fa2-a5e1-1db1cbd48f0c" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>ph_sensor_conn</seg>
+      </bo>
+      <bendpoints>
+        <point x="1026.0" y="320.0"/>
+        <point x="1026.0" y="242.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="982c3059-b4d8-460c-8736-b36878dd6c5d" manual="true">
+      <element uuid="c8c3feb9-b345-41a2-b1b3-0fe6edcc9723" manual="true">
+        <bo>
+          <seg>tag</seg>
+          <seg>unidirectional</seg>
+        </bo>
+      </element>
+      <bo>
+        <seg>connection</seg>
+        <seg>sensor_controller_conn</seg>
+      </bo>
+      <bendpoints>
+        <point x="1417.0" y="165.0"/>
+        <point x="1417.0" y="473.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="bcd79d99-1496-43d7-86b7-c88e3686f229" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>bus_conn</seg>
+      </bo>
+      <position x="658.0" y="418.0"/>
+      <size width="120.0" height="50.0"/>
+    </element>
+    <element uuid="e7f251a8-300e-4973-bcb5-96f79e135fff" manual="true">
+      <element uuid="19373d06-b3a3-451c-975a-480c9ae704cf" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="2b40a47e-1426-481a-8e34-2b4b5bc08548" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>get_data</seg>
+        </bo>
+        <position x="230.0" y="71.0"/>
+      </element>
+      <element uuid="5f1793c3-85fd-47f8-b526-b11608f8a8a2" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>post_data</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>iot_device</seg>
+      </bo>
+      <position x="1030.0" y="350.0"/>
+      <size width="303.0" height="160.0"/>
+    </element>
+    <element uuid="c9f1b7a0-e2d7-4d02-87ec-7006a4942c8a" manual="true">
+      <element uuid="63700d90-80f6-4594-a072-35910d7acc96" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="233.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>iot_processor</seg>
+      </bo>
+      <position x="244.0" y="520.0"/>
+      <size width="322.0" height="60.0"/>
+    </element>
+    <element uuid="ac54a533-cc62-4a19-a82e-e782fbe40490" manual="true">
+      <element uuid="e8b07a18-c5f5-4f96-97fd-4d67035030a9" manual="true" dockArea="bottom">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="190.0" y="36.0"/>
+      </element>
+      <element uuid="f3cd1376-1fd5-4fa6-a1d4-01743b509c1d" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>moisture_level_read</seg>
+        </bo>
+        <position x="315.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>moisture_sensor</seg>
+      </bo>
+      <position x="100.0" y="103.0"/>
+      <size width="466.0" height="60.0"/>
+    </element>
+    <element uuid="359ac1f6-5803-41d1-b159-d4df6b17e0e2" manual="true">
+      <element uuid="2584b2d7-68cb-4516-85ca-55cff11cbff0" manual="true" dockArea="bottom">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position x="40.0" y="36.0"/>
+      </element>
+      <element uuid="5527dfe8-d5a5-41d8-835d-e6d3dced2229" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>ph_level_read</seg>
+        </bo>
+        <position x="232.0" y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>ph_sensor</seg>
+      </bo>
+      <position x="578.0" y="258.0"/>
+      <size width="340.0" height="60.0"/>
+    </element>
+    <element uuid="9152bdf4-f4b7-42ca-a8de-987bba528311" manual="true">
+      <element uuid="86edd3d2-1abd-4874-aafd-4ed4673f0263" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>moisture_read</seg>
+        </bo>
+        <position y="35.0"/>
+      </element>
+      <element uuid="6c464226-f75a-4907-92d8-04beaef4eccf" manual="true" dockArea="bottom">
+        <bo>
+          <seg>feature</seg>
+          <seg>ph_read</seg>
+        </bo>
+        <position x="150.0" y="86.0"/>
+      </element>
+      <element uuid="7c1f0db0-f345-499e-9ae7-34494c970bb4" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>push_sensor_data</seg>
+        </bo>
+        <position x="304.0" y="35.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>sensor_controller</seg>
+      </bo>
+      <position x="758.0" y="78.0"/>
+      <size width="436.0" height="110.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>iotembeddedsystem.with_devices</seg>
+    </bo>
+    <position x="40.0" y="20.0"/>
+    <size width="1449.0" height="619.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>syst::iotembeddedsystem.with_devices</seg>
+    </context>
+  </config>
+</diagram:Diagram>
