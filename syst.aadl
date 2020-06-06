@@ -2,21 +2,36 @@ package syst
 public
 
 -- CROP MAINTANANCE SYSTEM ARCHITECTURE
+ 
 system CropMaintananceSystem
 end CropMaintananceSystem;
 system implementation CropMaintananceSystem.with_devices
 	subcomponents
 		application_server: device ApplicationServer;
 		database_server: device DatabaseServer;
+		sub_system: system IOTEmbeddedSystem.with_devices;
+end CropMaintananceSystem.with_devices;
+
+
+system IOTEmbeddedSystem
+end IOTEmbeddedSystem;
+system implementation IOTEmbeddedSystem.with_devices
+	subcomponents
 		iot_device: device IOTDevice;
 		moisture_sensor: device MoistureSensor;
 		ph_sensor: device PHSensor;
 		sensor_controller: process SensorController;
+		iot_processor: processor IOTProcessor;
+		bus_conn: bus HWConnection;
 	connections
 		sensor_controller_conn: port sensor_controller.push_sensor_data -> iot_device.get_data;
 		moisture_sensor_conn: port moisture_sensor.moisture_level_read -> sensor_controller.moisture_read;
 		ph_sensor_conn: port ph_sensor.ph_level_read -> sensor_controller.ph_read;
-end CropMaintananceSystem.with_devices;
+		
+		iot_processor_bus: bus access bus_conn -> iot_processor.bus_access;
+		moisture_sensor_bus: bus access bus_conn -> moisture_sensor.bus_access;
+		ph_sensor_bus: bus access bus_conn -> ph_sensor.bus_access;	
+end IOTEmbeddedSystem.with_devices;
 
 
 
@@ -43,6 +58,27 @@ device implementation IOTDevice.impl
 end IOTDevice.impl;
 
 
+-- IOT PROCESSOR IMPLEMENTATION
+processor IOTProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end IOTProcessor;
+processor implementation IOTProcessor.impl
+	subcomponents
+		iot_ram: memory IOTRam;
+end IOTProcessor.impl;
+
+memory IOTRam
+end IOTRam;
+
+
+-- DATA BUS DEFINITION
+bus HWConnection
+end HWConnection;
+bus implementation HWConnection.impl
+end HWConnection.impl;
+
+
 
 -- PROCESSOR CONTROLLERS
 process SensorController
@@ -60,6 +96,7 @@ end SensorController.with_threads;
 device MoistureSensor
 	features
 		moisture_level_read: out event port;
+		bus_access: requires bus access HWConnection;
 end MoistureSensor;
 device implementation MoistureSensor.impl
 end MoistureSensor.impl;
@@ -67,6 +104,7 @@ end MoistureSensor.impl;
 device PHSensor
 	features
 		ph_level_read: out event port;
+		bus_access: requires bus access HWConnection;
 end PHSensor;
 device implementation PHSensor.impl
 end PHSensor.impl;
