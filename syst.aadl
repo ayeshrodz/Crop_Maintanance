@@ -10,6 +10,10 @@ system implementation CropMaintananceSystem.with_devices
 		application_server: device ApplicationServer;
 		database_server: device DatabaseServer;
 		sub_system: system IOTEmbeddedSystem.with_devices;
+		bus_conn: bus HWConnection;
+		iot_device: device IOTDevice;
+	connections
+		app_server_bus: bus access bus_conn -> application_server.bus_access;
 end CropMaintananceSystem.with_devices;
 
 
@@ -31,12 +35,16 @@ system implementation IOTEmbeddedSystem.with_devices
 		iot_processor_bus: bus access bus_conn -> iot_processor.bus_access;
 		moisture_sensor_bus: bus access bus_conn -> moisture_sensor.bus_access;
 		ph_sensor_bus: bus access bus_conn -> ph_sensor.bus_access;	
+		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
 end IOTEmbeddedSystem.with_devices;
 
 
 
 -- SERVER CONTROLLERS
 device ApplicationServer
+	features
+		iot_data_read: in event port;
+		bus_access: requires bus access HWConnection;
 end ApplicationServer;
 device implementation ApplicationServer.impl
 end ApplicationServer.impl;
@@ -53,6 +61,7 @@ device IOTDevice
 	features
 		get_data: in event port;
 		post_data: out event port;
+		bus_access: requires bus access HWConnection;
 end IOTDevice;
 device implementation IOTDevice.impl
 end IOTDevice.impl;
@@ -90,6 +99,11 @@ end SensorController;
 process implementation SensorController.with_threads
 end SensorController.with_threads;
 
+
+process AppServerController
+end AppServerController;
+process implementation AppServerController.with_threads
+end AppServerController.with_threads;
 
 
 -- SENSOR CONTROLLERS
