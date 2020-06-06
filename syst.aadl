@@ -8,7 +8,7 @@ end CropMaintananceSystem;
 system implementation CropMaintananceSystem.with_devices
 	subcomponents
 		iot_sub_system: system IOTEmbeddedSystem.with_devices;
-		app_server_sub_system: system MainServerSystem.with_devices;
+		main_server_sub_system: system MainServerSystem.with_devices;
 		bus_conn: bus HWConnection;
 end CropMaintananceSystem.with_devices;
 
@@ -25,6 +25,8 @@ system implementation MainServerSystem.with_devices
 		bus_conn: bus HWConnection;
 		iot_device: device IOTDevice;
 		app_server_processor: processor AppServerProcessor;
+		db_server_processor: processor DBServerProcessor;
+		
 	connections
 		app_server_controller_get_data_conn: port database_server.data_out -> app_server_controller.db_data_reader;
 		app_server_controller_get_event_conn: port database_server.event_listner_out -> app_server_controller.db_event_response;
@@ -43,6 +45,8 @@ system implementation MainServerSystem.with_devices
 		sensor_battery_conn: port iot_device.post_data -> app_server_controller.get_sensor_battery_level;	
 		
 		app_server_processor_bus: bus access bus_conn -> app_server_processor.bus_access;
+		db_server_processor_bus: bus access bus_conn -> db_server_processor.bus_access;
+		
 		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
 		app_server_bus: bus access bus_conn -> application_server.bus_access;
 		db_server_bus: bus access bus_conn -> database_server.bus_access;
@@ -184,6 +188,20 @@ processor implementation AppServerProcessor.impl
 end AppServerProcessor.impl;
 memory AppServerRAM
 end AppServerRAM;
+
+
+
+-- DATABASE SERVER PROCESSOR IMPLEMENTATION
+processor DBServerProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end DBServerProcessor;
+processor implementation DBServerProcessor.impl
+	subcomponents
+		db_server_ram: memory DBServerRAM;
+end DBServerProcessor.impl;
+memory DBServerRAM
+end DBServerRAM;
 
 
 

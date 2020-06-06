@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="9910a2e4-31d1-412f-9d50-c0c9f95fa2cd" manual="true">
+    <element uuid="7ea14ebe-dea1-45e0-b8cd-bed4cce556b9" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>bus_conn</seg>
+      </bo>
+      <position x="12.0" y="38.0"/>
+      <size width="120.0" height="35.0"/>
+    </element>
+    <element uuid="3c6febc2-b6e5-415f-9090-6b90708e1c48" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>iot_sub_system</seg>
+      </bo>
+      <position x="12.0" y="93.0"/>
+      <size width="155.0" height="35.0"/>
+    </element>
+    <element uuid="b901583f-abb3-4ec4-9fe5-ba7df0d6c0ef" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>main_server_sub_system</seg>
+      </bo>
+      <position x="12.0" y="148.0"/>
+      <size width="225.0" height="35.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>cropmaintanancesystem.with_devices</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="324.0" height="195.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>classifier</seg>
+      <seg>syst::cropmaintanancesystem.with_devices</seg>
+    </context>
+  </config>
+</diagram:Diagram>
