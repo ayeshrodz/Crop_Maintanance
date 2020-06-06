@@ -7,14 +7,35 @@ system CropMaintananceSystem
 end CropMaintananceSystem;
 system implementation CropMaintananceSystem.with_devices
 	subcomponents
+		iot_sub_system: system IOTEmbeddedSystem.with_devices;
+		app_server_sub_system: system ApplicationServerSystem.with_devices;
+		bus_conn: bus HWConnection;
+end CropMaintananceSystem.with_devices;
+
+
+
+system ApplicationServerSystem
+end ApplicationServerSystem;
+system implementation ApplicationServerSystem.with_devices
+	subcomponents
 		application_server: device ApplicationServer;
-		database_server: device DatabaseServer;
-		sub_system: system IOTEmbeddedSystem.with_devices;
+		app_server_controller: process AppServerController;
 		bus_conn: bus HWConnection;
 		iot_device: device IOTDevice;
+		app_server_processor: processor AppServerProcessor;
 	connections
+		app_server_controller_data_conn: port app_server_controller.post_data -> application_server.get_data;
+		app_server_controller_event_conn: port app_server_controller.post_event -> application_server.get_event;
+		sensor_data_conn: port iot_device.post_data -> app_server_controller.get_sensor_data;
+		sensor_state_conn: port iot_device.post_data -> app_server_controller.get_sensor_state;
+		sensor_battery_conn: port iot_device.post_data -> app_server_controller.get_sensor_battery_level;	
+		
+		app_server_processor_bus: bus access bus_conn -> app_server_processor.bus_access;
+		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
 		app_server_bus: bus access bus_conn -> application_server.bus_access;
-end CropMaintananceSystem.with_devices;
+end ApplicationServerSystem.with_devices;
+
+
 
 
 system IOTEmbeddedSystem
@@ -47,7 +68,12 @@ end IOTEmbeddedSystem.with_devices;
 -- SERVER CONTROLLERS
 device ApplicationServer
 	features
-		iot_data_read: in event port;
+		get_data: in event port;
+		get_event: in event port;
+		write_sensor_data: out event port;
+		write_sensor_state_log: out event port;
+		write_notifications: out event port;
+		invoke_db_procedure: out event port;
 		bus_access: requires bus access HWConnection;
 end ApplicationServer;
 device implementation ApplicationServer.impl
@@ -71,28 +97,6 @@ device implementation IOTDevice.impl
 end IOTDevice.impl;
 
 
--- IOT PROCESSOR IMPLEMENTATION
-processor IOTProcessor
-	features
-		bus_access: requires bus access HWConnection;
-end IOTProcessor;
-processor implementation IOTProcessor.impl
-	subcomponents
-		iot_ram: memory IOTRam;
-end IOTProcessor.impl;
-
-memory IOTRam
-end IOTRam;
-
-
--- DATA BUS DEFINITION
-bus HWConnection
-end HWConnection;
-bus implementation HWConnection.impl
-end HWConnection.impl;
-
-
-
 -- PROCESSOR CONTROLLERS
 process SensorController
 	features
@@ -109,9 +113,51 @@ end SensorController.with_threads;
 
 
 process AppServerController
+	features
+		get_sensor_data: in event port;
+		get_sensor_state: in event port;
+		get_sensor_battery_level: in event port;
+		post_data: out event port;
+		post_event: out event port;
 end AppServerController;
 process implementation AppServerController.with_threads
 end AppServerController.with_threads;
+
+
+
+-- IOT PROCESSOR IMPLEMENTATION
+processor IOTProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end IOTProcessor;
+processor implementation IOTProcessor.impl
+	subcomponents
+		iot_ram: memory IOTRAM;
+end IOTProcessor.impl;
+memory IOTRAM
+end IOTRAM;
+
+
+-- APPLICATION SERVER PROCESSOR IMPLEMENTATION
+processor AppServerProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end AppServerProcessor;
+processor implementation AppServerProcessor.impl
+	subcomponents
+		app_server_ram: memory AppServerRAM;
+end AppServerProcessor.impl;
+memory AppServerRAM
+end AppServerRAM;
+
+
+
+-- DATA BUS DEFINITION
+bus HWConnection
+end HWConnection;
+bus implementation HWConnection.impl
+end HWConnection.impl;
+
 
 
 -- SENSOR CONTROLLERS
