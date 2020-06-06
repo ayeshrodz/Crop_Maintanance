@@ -1,46 +1,74 @@
 package syst
 public
 
+-- CROP MAINTANANCE SYSTEM ARCHITECTURE
 system CropMaintananceSystem
 end CropMaintananceSystem;
-
 system implementation CropMaintananceSystem.with_devices
-	
+	subcomponents
+		application_server: device ApplicationServer;
+		database_server: device DatabaseServer;
+		iot_device: device IOTDevice;
+		moisture_sensor: device MoistureSensor;
+		ph_sensor: device PHSensor;
+		sensor_controller: process SensorController;
+	connections
+		sensor_controller_conn: port sensor_controller.push_sensor_data -> iot_device.get_data;
+		moisture_sensor_conn: port moisture_sensor.moisture_level_read -> sensor_controller.moisture_read;
+		ph_sensor_conn: port ph_sensor.ph_level_read -> sensor_controller.ph_read;
 end CropMaintananceSystem.with_devices;
 
 
 
-
+-- SERVER CONTROLLERS
 device ApplicationServer
 end ApplicationServer;
-
 device implementation ApplicationServer.impl
 end ApplicationServer.impl;
 
-
-
-
 device DatabaseServer
 end DatabaseServer;
-
 device implementation DatabaseServer.impl
 end DatabaseServer.impl;
 
 
 
-
+-- IOT DEVICE CONTROLLERS
 device IOTDevice
+	features
+		get_data: in event port;
+		post_data: out event port;
 end IOTDevice;
-
 device implementation IOTDevice.impl
 end IOTDevice.impl;
 
 
 
-device Sensor
-end Sensor;
+-- PROCESSOR CONTROLLERS
+process SensorController
+	features
+		moisture_read: in event port;
+		ph_read: in event port;
+		push_sensor_data: out event port;
+end SensorController;
+process implementation SensorController.with_threads
+end SensorController.with_threads;
 
-device implementation Sensor.impl
-end Sensor.impl;
+
+
+-- SENSOR CONTROLLERS
+device MoistureSensor
+	features
+		moisture_level_read: out event port;
+end MoistureSensor;
+device implementation MoistureSensor.impl
+end MoistureSensor.impl;
+
+device PHSensor
+	features
+		ph_level_read: out event port;
+end PHSensor;
+device implementation PHSensor.impl
+end PHSensor.impl;
 
 end syst;
