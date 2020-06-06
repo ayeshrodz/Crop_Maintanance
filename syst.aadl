@@ -8,24 +8,36 @@ end CropMaintananceSystem;
 system implementation CropMaintananceSystem.with_devices
 	subcomponents
 		iot_sub_system: system IOTEmbeddedSystem.with_devices;
-		app_server_sub_system: system ApplicationServerSystem.with_devices;
+		app_server_sub_system: system MainServerSystem.with_devices;
 		bus_conn: bus HWConnection;
 end CropMaintananceSystem.with_devices;
 
 
 
-system ApplicationServerSystem
-end ApplicationServerSystem;
-system implementation ApplicationServerSystem.with_devices
+system MainServerSystem
+end MainServerSystem;
+system implementation MainServerSystem.with_devices
 	subcomponents
 		application_server: device ApplicationServer;
+		database_server: device DatabaseServer;
 		app_server_controller: process AppServerController;
+		db_server_controller: process DBServerController;
 		bus_conn: bus HWConnection;
 		iot_device: device IOTDevice;
 		app_server_processor: processor AppServerProcessor;
 	connections
-		app_server_controller_data_conn: port app_server_controller.post_data -> application_server.get_data;
-		app_server_controller_event_conn: port app_server_controller.post_event -> application_server.get_event;
+		app_server_controller_get_data_conn: port database_server.data_out -> app_server_controller.db_data_reader;
+		app_server_controller_get_event_conn: port database_server.event_listner_out -> app_server_controller.db_event_response;
+		app_server_controller_post_data_conn: port app_server_controller.post_data -> application_server.get_data;
+		app_server_controller_post_event_conn: port app_server_controller.post_event -> application_server.get_event;
+		
+		db_server_controller_write_data: port application_server.write_sensor_data -> db_server_controller.db_data_writter;
+		db_server_controller_write_log: port application_server.write_sensor_state_log -> db_server_controller.db_log_writter;
+		db_server_controller_write_notifications: port application_server.write_notifications -> db_server_controller.db_notification_handler;
+		db_server_controller_event_emmiter: port application_server.invoke_db_procedure -> db_server_controller.db_event_listner;
+		db_server_controller_post_data: port db_server_controller.db_post_data -> database_server.get_data;
+		db_server_controller_post_event: port db_server_controller.db_post_event -> database_server.event_listner_in;
+		
 		sensor_data_conn: port iot_device.post_data -> app_server_controller.get_sensor_data;
 		sensor_state_conn: port iot_device.post_data -> app_server_controller.get_sensor_state;
 		sensor_battery_conn: port iot_device.post_data -> app_server_controller.get_sensor_battery_level;	
@@ -33,7 +45,8 @@ system implementation ApplicationServerSystem.with_devices
 		app_server_processor_bus: bus access bus_conn -> app_server_processor.bus_access;
 		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
 		app_server_bus: bus access bus_conn -> application_server.bus_access;
-end ApplicationServerSystem.with_devices;
+		db_server_bus: bus access bus_conn -> database_server.bus_access;
+end MainServerSystem.with_devices;
 
 
 
@@ -79,7 +92,14 @@ end ApplicationServer;
 device implementation ApplicationServer.impl
 end ApplicationServer.impl;
 
+
 device DatabaseServer
+	features
+		get_data: in event port;
+		event_listner_in: in event port;
+		data_out: out event port;
+		event_listner_out: out event port;
+		bus_access: requires bus access HWConnection;
 end DatabaseServer;
 device implementation DatabaseServer.impl
 end DatabaseServer.impl;
@@ -117,11 +137,26 @@ process AppServerController
 		get_sensor_data: in event port;
 		get_sensor_state: in event port;
 		get_sensor_battery_level: in event port;
+		db_data_reader: in event port;
+		db_event_response: in event port;
 		post_data: out event port;
 		post_event: out event port;
 end AppServerController;
 process implementation AppServerController.with_threads
 end AppServerController.with_threads;
+
+
+process DBServerController
+	features
+		db_data_writter: in event port;
+		db_log_writter: in event port;
+		db_notification_handler: in event port;
+		db_event_listner: in event port;
+		db_post_data: out event port;
+		db_post_event: out event port;
+end DBServerController;
+process implementation DBServerController.with_threads
+end DBServerController.with_threads;
 
 
 
