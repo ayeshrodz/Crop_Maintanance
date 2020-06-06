@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="1bf51fbb-02fe-4e47-8218-2a0921932947" manual="true">
-    <element uuid="b9cb59c3-a69b-4e8f-9e8d-398ea18822fc" manual="true">
-      <element uuid="53abadf3-9a86-4a89-b2ad-a03c0eeddbf8" manual="true">
+  <element uuid="7def721b-db70-42ea-af80-5944b3fdd383" manual="true">
+    <element uuid="c6f44ef8-76b3-4866-a112-afdc4d245d1d" manual="true">
+      <element uuid="362f32aa-c5d1-4e8b-8472-52be5cef15f8" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -13,12 +13,13 @@
         <seg>app_server_bus</seg>
       </bo>
       <bendpoints>
-        <point x="1215.0" y="560.0"/>
-        <point x="1215.0" y="382.0"/>
+        <point x="148.0" y="493.0"/>
+        <point x="164.0" y="493.0"/>
+        <point x="164.0" y="298.0"/>
       </bendpoints>
     </element>
-    <element uuid="6347af1a-bc88-4ad0-8f3e-e7b4f4062fe4" manual="true">
-      <element uuid="5cc7a220-737d-4359-a213-a1a094222c0b" manual="true">
+    <element uuid="ceeb9ed7-97c1-45b0-a8c4-41cee284e0af" manual="true">
+      <element uuid="6995da48-9b4f-48c2-9e65-845c71b1da82" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -29,12 +30,12 @@
         <seg>app_server_controller_get_data_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1893.0" y="829.0"/>
-        <point x="1893.0" y="472.0"/>
+        <point x="1722.0" y="306.33333333333337"/>
+        <point x="1722.0" y="420.0"/>
       </bendpoints>
     </element>
-    <element uuid="109187ba-634d-4beb-bd81-e68a168ea68b" manual="true">
-      <element uuid="9ced7ddc-5517-467b-9bd9-b389b61fe846" manual="true">
+    <element uuid="cacfab23-6b15-4ff9-9fb9-2774fde35432" manual="true">
+      <element uuid="b2ff5f14-fb27-4079-beb0-3a1c058896b6" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -45,12 +46,12 @@
         <seg>app_server_controller_get_event_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1948.0" y="895.0"/>
-        <point x="1948.0" y="386.0"/>
+        <point x="1712.0" y="373.0"/>
+        <point x="1712.0" y="470.0"/>
       </bendpoints>
     </element>
-    <element uuid="4345ea6e-977d-48b2-8534-10c73ebe51f3" manual="true">
-      <element uuid="0abaa8f6-3191-4f02-a827-9219ce0c8710" manual="true">
+    <element uuid="b4290c3b-bf33-4be8-8e11-0b8e8a100b63" manual="true">
+      <element uuid="c730d484-d058-429c-8023-02ce0f67d59a" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -61,12 +62,14 @@
         <seg>app_server_controller_post_data_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1463.0" y="324.0"/>
-        <point x="1463.0" y="202.0"/>
+        <point x="1732.0" y="370.0"/>
+        <point x="1732.0" y="170.0"/>
+        <point x="703.0" y="170.0"/>
+        <point x="703.0" y="173.0"/>
       </bendpoints>
     </element>
-    <element uuid="f4871d89-e699-470e-959a-62c96e62a192" manual="true">
-      <element uuid="c51ecd92-0d63-4ead-8589-9c3e22bfbb78" manual="true">
+    <element uuid="b0ce006b-b400-4e5b-a719-ad575026c19c" manual="true">
+      <element uuid="7175d52b-14ee-4269-8f89-b0deaa677612" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -77,12 +80,12 @@
         <seg>app_server_controller_post_event_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1390.0" y="369.0"/>
-        <point x="1390.0" y="271.0"/>
+        <point x="703.0" y="520.0"/>
+        <point x="703.0" y="423.0"/>
       </bendpoints>
     </element>
-    <element uuid="6b6bc679-77a3-4af8-8172-bae3c262236d" manual="true">
-      <element uuid="306d55a6-8857-4832-9722-8ced42b13c7f" manual="true">
+    <element uuid="00dfa9b2-bd81-4e0d-9bc5-2dadb05cda0f" manual="true">
+      <element uuid="87dcd2f1-fb94-4d5a-b455-fd784ce969b2" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -93,11 +96,13 @@
         <seg>app_server_processor_bus</seg>
       </bo>
       <bendpoints>
-        <point x="962.0" y="702.0"/>
+        <point x="148.0" y="523.0"/>
+        <point x="154.0" y="523.0"/>
+        <point x="154.0" y="584.0"/>
       </bendpoints>
     </element>
-    <element uuid="e4917876-574f-4ef2-992e-ac572ae9a337" manual="true">
-      <element uuid="4be7db6d-e14a-493c-b2c3-a58529b348e7" manual="true">
+    <element uuid="a5539c6d-0ea2-45ee-8fc7-ae84d1a07109" manual="true">
+      <element uuid="813d5e97-3fca-4e9f-a320-78cb31c107c4" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -108,12 +113,15 @@
         <seg>db_server_bus</seg>
       </bo>
       <bendpoints>
-        <point x="525.0" y="560.0"/>
-        <point x="525.0" y="838.0"/>
+        <point x="148.0" y="513.0"/>
+        <point x="164.0" y="513.0"/>
+        <point x="164.0" y="531.0"/>
+        <point x="1271.0" y="531.0"/>
+        <point x="1271.0" y="389.6666666666667"/>
       </bendpoints>
     </element>
-    <element uuid="28262bf8-3d38-491e-b1c0-b1dd3540fb8d" manual="true">
-      <element uuid="d2d07f54-fa00-4b27-999e-16ddbb08ca42" manual="true">
+    <element uuid="08f70df9-5bd9-47f1-8169-90464aa6f10a" manual="true">
+      <element uuid="db3bbeeb-a925-4755-8330-42d473d44f1b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -124,8 +132,8 @@
         <seg>db_server_controller_event_emmiter</seg>
       </bo>
     </element>
-    <element uuid="4d088406-cdd7-4e28-86ff-53eb589c12aa" manual="true">
-      <element uuid="e8ab0c35-d31c-4606-b366-28af0241eb2a" manual="true">
+    <element uuid="4473c1b1-8f77-4e3f-b41a-f65bbdf6a3e6" manual="true">
+      <element uuid="a5f3e84a-402e-4570-ae74-93aa85289ddf" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -135,13 +143,9 @@
         <seg>connection</seg>
         <seg>db_server_controller_post_data</seg>
       </bo>
-      <bendpoints>
-        <point x="144.0" y="271.0"/>
-        <point x="144.0" y="928.0"/>
-      </bendpoints>
     </element>
-    <element uuid="0f5b760a-c9e8-4545-803f-3c6f1f641b10" manual="true">
-      <element uuid="f34b0c25-b6d9-47c7-933f-24263b0aad52" manual="true">
+    <element uuid="6fc1a17e-adc5-4c3c-a51b-07757be35102" manual="true">
+      <element uuid="b01e971f-7677-48e8-8f03-09ae642e2d0b" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -152,11 +156,12 @@
         <seg>db_server_controller_post_event</seg>
       </bo>
       <bendpoints>
-        <point x="327.0" y="883.0"/>
+        <point x="1271.0" y="256.3333333333333"/>
+        <point x="1271.0" y="289.6666666666667"/>
       </bendpoints>
     </element>
-    <element uuid="df98807b-8535-42e6-aeec-d08a1dff67b6" manual="true">
-      <element uuid="b16079ed-4048-4f29-bc6b-50b729be4041" manual="true">
+    <element uuid="96f717da-c8df-47dc-9fb6-e8d4d0eab024" manual="true">
+      <element uuid="915ceddf-7525-4d73-9a65-572ddf38fbae" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -167,8 +172,8 @@
         <seg>db_server_controller_write_data</seg>
       </bo>
     </element>
-    <element uuid="6e8fd34f-9b91-42d8-b2aa-531aea21b1f2" manual="true">
-      <element uuid="7d7c92d7-7f43-4d9f-a590-73cc223b278a" manual="true">
+    <element uuid="7382f56c-6c90-45d9-bd0f-f75f1163e9c0" manual="true">
+      <element uuid="e6f73453-d395-4999-86a6-a5c20430fe1c" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -179,8 +184,8 @@
         <seg>db_server_controller_write_log</seg>
       </bo>
     </element>
-    <element uuid="d63c8c66-dc6f-4602-ae79-3914631704d0" manual="true">
-      <element uuid="72a6e74a-0dbd-48ef-b53a-e50f976aa477" manual="true">
+    <element uuid="5cce19c4-7f8c-4524-b010-298b0190bf79" manual="true">
+      <element uuid="781f82df-8314-485f-bf0e-3931a05162b7" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -191,8 +196,8 @@
         <seg>db_server_controller_write_notifications</seg>
       </bo>
     </element>
-    <element uuid="4863eb93-fc86-4249-ba4d-6923930573af" manual="true">
-      <element uuid="3b79b509-8d4a-4b27-89e0-41a9b7f083d6" manual="true">
+    <element uuid="1f9aafca-4d5d-4574-8320-143c5f641362" manual="true">
+      <element uuid="b6380745-5d0c-4e39-9e7f-a43c30e771d4" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -202,9 +207,12 @@
         <seg>connection</seg>
         <seg>db_server_processor_bus</seg>
       </bo>
+      <bendpoints>
+        <point x="144.0" y="503.0"/>
+      </bendpoints>
     </element>
-    <element uuid="8bbf473f-14d1-4b13-b304-5a7168521691" manual="true">
-      <element uuid="0a97362f-8deb-4617-8a8c-ac31ed707bd1" manual="true">
+    <element uuid="dc4ceaf6-634c-48c4-9bf3-5f08f3cc3260" manual="true">
+      <element uuid="4cebb031-99a7-4ade-8466-96e3189c35e8" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -214,9 +222,14 @@
         <seg>connection</seg>
         <seg>iot_device_bus</seg>
       </bo>
+      <bendpoints>
+        <point x="148.0" y="483.0"/>
+        <point x="154.0" y="483.0"/>
+        <point x="154.0" y="92.0"/>
+      </bendpoints>
     </element>
-    <element uuid="c5425e33-1880-4691-a181-870c9b15c332" manual="true">
-      <element uuid="2d4c859e-609c-4260-8db9-ddeec6117c73" manual="true">
+    <element uuid="c0440916-58a8-4e4c-9603-dc180575d7ea" manual="true">
+      <element uuid="d6a26b74-4807-43cd-a842-421077f5d624" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -227,12 +240,12 @@
         <seg>sensor_battery_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1458.0" y="677.0"/>
-        <point x="1762.0" y="677.0"/>
+        <point x="1742.0" y="117.0"/>
+        <point x="1742.0" y="320.0"/>
       </bendpoints>
     </element>
-    <element uuid="5ad9e382-5010-47e3-9340-7ff0ce7f35d7" manual="true">
-      <element uuid="846215e9-0b21-4919-97d9-6c4a7e17ebd0" manual="true">
+    <element uuid="a4b68a6c-be9d-4986-b66c-412258685091" manual="true">
+      <element uuid="7ba2d31a-ed3b-4424-a24e-d7acfdbc389e" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -243,12 +256,12 @@
         <seg>sensor_data_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1391.0" y="677.0"/>
-        <point x="1391.0" y="433.0"/>
+        <point x="1742.0" y="117.0"/>
+        <point x="1742.0" y="270.0"/>
       </bendpoints>
     </element>
-    <element uuid="af44b786-80c3-4c25-82f0-b21355e549b3" manual="true">
-      <element uuid="4869ed0a-fe7a-4b36-b8f1-5f02f414ad66" manual="true">
+    <element uuid="3775e287-5d49-4730-b78f-29ad9db430b8" manual="true">
+      <element uuid="a80669e9-d249-4e08-a8d6-645507ac1e5a" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -259,271 +272,271 @@
         <seg>sensor_state_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1425.0" y="677.0"/>
-        <point x="1425.0" y="492.0"/>
+        <point x="1742.0" y="117.0"/>
+        <point x="1742.0" y="220.0"/>
       </bendpoints>
     </element>
-    <element uuid="1b265b3f-0996-4b00-af8e-8282c0112df6" manual="true">
-      <element uuid="515a5088-2061-416f-9775-5ca1b12483d3" manual="true" dockArea="right">
+    <element uuid="499f1e2b-e369-4f10-9f39-251dad00d495" manual="true">
+      <element uuid="7458c591-6fee-40d4-9f9f-8f60d797a020" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>db_data_reader</seg>
         </bo>
-        <position x="233.0" y="180.0"/>
+        <position y="210.0"/>
       </element>
-      <element uuid="add39d20-f29a-4326-905f-0a73d4baa0dc" manual="true" dockArea="right">
+      <element uuid="9db9da5d-4e89-4f90-9765-e3a39f1c87f6" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>db_event_response</seg>
         </bo>
-        <position x="209.0" y="94.0"/>
+        <position y="260.0"/>
       </element>
-      <element uuid="0407cbb7-2f77-44ac-89b2-a6848aa58d6b" manual="true" dockArea="bottom">
+      <element uuid="68eb7e73-b63c-4988-beeb-15c28ae14461" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>get_sensor_battery_level</seg>
         </bo>
-        <position x="60.0" y="247.0"/>
+        <position y="110.0"/>
       </element>
-      <element uuid="c0fa7004-f09d-4d97-b9ef-4b86ece4b897" manual="true" dockArea="left">
+      <element uuid="a70180cf-04be-4387-9447-22beb3e08b90" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>get_sensor_data</seg>
         </bo>
-        <position y="141.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="60ff4cfb-52e4-45b8-8ea2-85b4549789b6" manual="true" dockArea="left">
+      <element uuid="a96007c0-56e4-4d7d-9ad2-c7825c2058af" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>get_sensor_state</seg>
         </bo>
-        <position y="200.0"/>
+        <position y="10.0"/>
       </element>
-      <element uuid="f142a385-8efa-4524-b2af-6dce45703179" manual="true" dockArea="left">
+      <element uuid="1c4a0aec-b8b0-492f-ac71-6295eb1a94e0" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>post_data</seg>
         </bo>
-        <position y="32.0"/>
+        <position y="160.0"/>
       </element>
-      <element uuid="e76f6f6f-055b-4157-b420-bbc4e16e7418" manual="true" dockArea="left">
+      <element uuid="71f45860-a939-4ce5-8d3a-0902e9cebf0e" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>post_event</seg>
         </bo>
-        <position y="77.0"/>
+        <position y="310.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>app_server_controller</seg>
       </bo>
-      <position x="1430.0" y="170.0"/>
-      <size width="351.0" height="271.0"/>
+      <position x="1740.0" y="166.0"/>
+      <size width="573.0" height="360.0"/>
     </element>
-    <element uuid="671dd6c7-6c5b-465f-967f-621e040f6b26" manual="true">
-      <element uuid="d2c036bf-0e82-40ac-b6ad-9d221355e32d" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>bus_access</seg>
-        </bo>
-        <position x="293.0" y="20.0"/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>app_server_processor</seg>
-      </bo>
-      <position x="480.0" y="560.0"/>
-      <size width="382.0" height="60.0"/>
-    </element>
-    <element uuid="1f64e60c-e4d8-4a03-85ef-d9cb020d1d94" manual="true">
-      <element uuid="8017880f-3ec9-421a-8c9b-0bfbfcffcd04" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>bus_access</seg>
-        </bo>
-        <position x="281.0" y="190.0"/>
-      </element>
-      <element uuid="48b37f5a-8a4c-42a3-b080-788426abebb4" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>get_data</seg>
-        </bo>
-        <position x="297.0" y="10.0"/>
-      </element>
-      <element uuid="aa9355e8-c36b-4aaf-8ea1-0ebccf444485" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>get_event</seg>
-        </bo>
-        <position x="290.0" y="79.0"/>
-      </element>
-      <element uuid="897535ed-d2d4-4607-9067-5ac19c3056fd" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>invoke_db_procedure</seg>
-        </bo>
-        <position y="40.0"/>
-      </element>
-      <element uuid="446b78e8-8c1e-49ad-a037-5648b0a20b5b" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>write_notifications</seg>
-        </bo>
-        <position y="90.0"/>
-      </element>
-      <element uuid="2fe04949-8346-4209-81f6-f9d2d3748d1c" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>write_sensor_data</seg>
-        </bo>
-        <position y="190.0"/>
-      </element>
-      <element uuid="a409c539-fbc1-402f-a57d-3a90571a8203" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>write_sensor_state_log</seg>
-        </bo>
-        <position y="140.0"/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>application_server</seg>
-      </bo>
-      <position x="710.0" y="70.0"/>
-      <size width="370.0" height="255.0"/>
-    </element>
-    <element uuid="a9093df7-fcb7-4e75-b107-2e6ec3279019" manual="true">
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>bus_conn</seg>
-      </bo>
-      <position x="822.0" y="440.0"/>
-      <size width="120.0" height="60.0"/>
-    </element>
-    <element uuid="53b3f2ef-ab06-4844-8945-43b8febe3f30" manual="true">
-      <element uuid="1210853c-2c56-41a5-becf-e38f5cbee073" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>bus_access</seg>
-        </bo>
-        <position y="35.0"/>
-      </element>
-      <element uuid="966b1c6a-b5b3-47bb-ad8e-721aba9d35a7" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>data_out</seg>
-        </bo>
-        <position x="348.0" y="27.0"/>
-      </element>
-      <element uuid="6260796b-ac3c-4a09-a65e-307c508b2a28" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>event_listner_in</seg>
-        </bo>
-        <position y="81.0"/>
-      </element>
-      <element uuid="eb1abdae-79d4-44b3-9a6d-0c85aa6e0e5a" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>event_listner_out</seg>
-        </bo>
-        <position x="293.0" y="93.0"/>
-      </element>
-      <element uuid="f313b57b-9231-4a38-bbb6-ba8020e9b215" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>get_data</seg>
-        </bo>
-        <position y="126.0"/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>database_server</seg>
-      </bo>
-      <position x="671.0" y="680.0"/>
-      <size width="421.0" height="166.0"/>
-    </element>
-    <element uuid="3a483f3b-39a8-4631-af87-d94795203e07" manual="true">
-      <element uuid="2ebb1b2a-7ed4-4808-8442-6702ae158098" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_data_writter</seg>
-        </bo>
-        <position x="294.0" y="190.0"/>
-      </element>
-      <element uuid="97645f2d-02c1-495e-a404-fb2bb2bf392d" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_event_listner</seg>
-        </bo>
-        <position x="288.0" y="40.0"/>
-      </element>
-      <element uuid="ca7d03f8-6d31-462a-9c5f-d850adaecf61" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_log_writter</seg>
-        </bo>
-        <position x="302.0" y="140.0"/>
-      </element>
-      <element uuid="79f910c5-bac1-4c37-a9f6-f6b351e45b5f" manual="true" dockArea="right">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_notification_handler</seg>
-        </bo>
-        <position x="235.0" y="91.0"/>
-      </element>
-      <element uuid="92367a2a-c6b2-4948-b683-3e2495e56dee" manual="true" dockArea="left">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_post_data</seg>
-        </bo>
-        <position y="79.0"/>
-      </element>
-      <element uuid="d72a6fc2-076b-4863-8de4-e3cc525afbb5" manual="true" dockArea="bottom">
-        <bo>
-          <seg>feature</seg>
-          <seg>db_post_event</seg>
-        </bo>
-        <position x="30.0" y="245.0"/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>db_server_controller</seg>
-      </bo>
-      <position x="100.0" y="70.0"/>
-      <size width="411.0" height="269.0"/>
-    </element>
-    <element uuid="8d2dc1d7-bef7-43d7-b33c-1246a9da842e" manual="true">
-      <element uuid="b7c63476-dc4d-47de-88d3-4ed2aef4ff01" manual="true" dockArea="bottom">
-        <bo>
-          <seg>feature</seg>
-          <seg>bus_access</seg>
-        </bo>
-        <position x="80.0" y="36.0"/>
-      </element>
-      <bo>
-        <seg>subcomponent</seg>
-        <seg>db_server_processor</seg>
-      </bo>
-      <position x="500.0" y="350.0"/>
-      <size width="373.0" height="60.0"/>
-    </element>
-    <element uuid="c8bdfc94-1d28-46bb-a93c-1f66a944a05d" manual="true">
-      <element uuid="5c6bd9bc-a94c-4046-9932-377fb044684f" manual="true" dockArea="left">
+    <element uuid="d49bb6e9-6fe3-495a-a3c3-dad11582941e" manual="true">
+      <element uuid="5d5242da-267b-4e0b-a114-ce3a32614396" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>bus_access</seg>
         </bo>
         <position y="10.0"/>
       </element>
-      <element uuid="b95c3151-79f6-4e71-a19b-c469053e3205" manual="true" dockArea="left">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>app_server_processor</seg>
+      </bo>
+      <position x="162.0" y="530.0"/>
+      <size width="382.0" height="60.0"/>
+    </element>
+    <element uuid="1a70ea80-b8ed-4935-bd18-c87298ba2cd4" manual="true">
+      <element uuid="7fba34b9-460a-4362-85d5-7273f9807eef" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="135.0"/>
+      </element>
+      <element uuid="ea074a22-ddaa-4682-94fe-6faae222171a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>get_data</seg>
+        </bo>
+        <position x="446.0" y="10.0"/>
+      </element>
+      <element uuid="034e2c82-fea9-4f47-a6f5-df699ba5dcfd" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>get_event</seg>
+        </bo>
+        <position x="439.0" y="260.0"/>
+      </element>
+      <element uuid="23ef741b-091f-45f9-99f8-83a93fa6ac3a" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>invoke_db_procedure</seg>
+        </bo>
+        <position x="360.0" y="60.0"/>
+      </element>
+      <element uuid="75055495-1533-42e4-a460-8b73b1d5b413" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>write_notifications</seg>
+        </bo>
+        <position x="381.0" y="110.0"/>
+      </element>
+      <element uuid="3b5c0f48-f588-4dc6-b7f9-8181629a8908" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>write_sensor_data</seg>
+        </bo>
+        <position x="384.0" y="210.0"/>
+      </element>
+      <element uuid="bb421db9-3e74-4cf6-bacf-20a49bec9416" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>write_sensor_state_log</seg>
+        </bo>
+        <position x="350.0" y="160.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>application_server</seg>
+      </bo>
+      <position x="162.0" y="119.0"/>
+      <size width="519.0" height="310.0"/>
+    </element>
+    <element uuid="87e32e32-af98-461f-852e-01a8714f01d3" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>bus_conn</seg>
+      </bo>
+      <position x="12.0" y="461.0"/>
+      <size width="120.0" height="60.0"/>
+    </element>
+    <element uuid="a4e4e138-61ae-4c08-95be-ab7c10f64f0f" manual="true">
+      <element uuid="429f9221-55e7-4d69-a0ac-f928192695af" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="9fba0962-010b-45e4-85cb-b8ac65c67346" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>data_out</seg>
+        </bo>
+        <position x="348.0" y="27.0"/>
+      </element>
+      <element uuid="d1200d81-3fa8-4d30-a12c-606736ce1e9c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>event_listner_in</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="391aa5ca-9f7f-40c4-9111-046b83679221" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>event_listner_out</seg>
+        </bo>
+        <position x="293.0" y="93.0"/>
+      </element>
+      <element uuid="cb964477-15d2-4d4e-b319-9b8001d8cc8e" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>get_data</seg>
         </bo>
         <position y="60.0"/>
       </element>
-      <element uuid="38dc4ad7-0f4a-42c8-8d76-65723888bda2" manual="true" dockArea="right">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>database_server</seg>
+      </bo>
+      <position x="1269.0" y="236.0"/>
+      <size width="421.0" height="160.0"/>
+    </element>
+    <element uuid="49f928c6-1045-4ffc-b2fc-35d9ef09a688" manual="true">
+      <element uuid="60db8808-0091-488c-8890-6d122ccc0dea" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_data_writter</seg>
+        </bo>
+        <position y="160.0"/>
+      </element>
+      <element uuid="19d920d3-045f-4ad9-8b99-6d03a93b998c" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_event_listner</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="94884ad4-aa9b-41d0-9afe-a04e27d64bd3" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_log_writter</seg>
+        </bo>
+        <position y="110.0"/>
+      </element>
+      <element uuid="aa53ef53-c61c-435d-8443-8729a53b2c4f" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_notification_handler</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="efcbf2e2-549b-4fcc-bfda-e914f0dcc269" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_post_data</seg>
+        </bo>
+        <position x="446.0" y="127.0"/>
+      </element>
+      <element uuid="ee9658f2-9961-49ab-8545-cc76e6de2baa" manual="true" dockArea="right">
+        <bo>
+          <seg>feature</seg>
+          <seg>db_post_event</seg>
+        </bo>
+        <position x="439.0" y="43.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>db_server_controller</seg>
+      </bo>
+      <position x="701.0" y="169.0"/>
+      <size width="548.0" height="210.0"/>
+    </element>
+    <element uuid="95f1d48e-8219-4dff-b89f-9745615bc015" manual="true">
+      <element uuid="c18ad5ce-eda8-441b-acbb-f6bfcbac2621" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>db_server_processor</seg>
+      </bo>
+      <position x="162.0" y="449.0"/>
+      <size width="373.0" height="60.0"/>
+    </element>
+    <element uuid="d79af13a-efb1-4423-94b8-a9421157a162" manual="true">
+      <element uuid="dc223da2-e288-4ad3-a050-a2b61154e544" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>bus_access</seg>
+        </bo>
+        <position y="10.0"/>
+      </element>
+      <element uuid="eea9a44f-56dd-48aa-af7f-d629e414ab7e" manual="true" dockArea="left">
+        <bo>
+          <seg>feature</seg>
+          <seg>get_data</seg>
+        </bo>
+        <position y="60.0"/>
+      </element>
+      <element uuid="04a8cb92-5a0d-4cce-9e85-df9cb135d2e7" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>post_data</seg>
@@ -534,15 +547,15 @@
         <seg>subcomponent</seg>
         <seg>iot_device</seg>
       </bo>
-      <position x="990.0" y="520.0"/>
+      <position x="1328.0" y="38.0"/>
       <size width="303.0" height="110.0"/>
     </element>
     <bo>
       <seg>classifier</seg>
       <seg>mainserversystem.with_devices</seg>
     </bo>
-    <position x="80.0" y="90.0"/>
-    <size width="1921.0" height="921.0"/>
+    <position x="12.0" y="12.0"/>
+    <size width="2325.0" height="602.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>

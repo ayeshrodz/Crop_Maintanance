@@ -1,0 +1,20 @@
+package main_integrated
+public
+	with app_server; -- IMPORT
+	with iot; -- IMPORT
+
+-- CROP MAINTANANCE SYSTEM ARCHITECTURE
+	system CropMaintananceSystem
+	end CropMaintananceSystem;
+
+	system implementation CropMaintananceSystem.with_devices
+		subcomponents
+			iot_sub_system: system iot::IOTEmbeddedSystem.with_devices;
+			app_server_sub_system: system app_server::ApplicationServerSystem.with_devices;
+--			bus_conn: bus iot::HWConnection; -- DISABLED : TEMPORARILY
+			
+	end CropMaintananceSystem.with_devices;
+	
+	
+	
+end main_integrated;

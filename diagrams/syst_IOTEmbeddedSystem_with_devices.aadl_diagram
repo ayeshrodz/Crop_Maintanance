@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="ASCII"?>
 <diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
-  <element uuid="79c41b64-6f6a-48e1-aeeb-e9183e86b9df" manual="true">
-    <element uuid="7023706f-a85c-4da4-bd91-18322dfb66da" manual="true">
-      <element uuid="ffb1b9ee-488e-45ee-aed3-4e58d2d899c6" manual="true">
+  <element uuid="8931b7a0-4bbc-45eb-98ec-8032db983068" manual="true">
+    <element uuid="cdd6c4f3-dddd-4fd6-8b62-ee360dcc7e1a" manual="true">
+      <element uuid="93d3be3e-692d-418c-ba4c-e30ef15a6125" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -12,9 +12,16 @@
         <seg>connection</seg>
         <seg>iot_device_bus</seg>
       </bo>
+      <bendpoints>
+        <point x="148.0" y="122.0"/>
+        <point x="154.0" y="122.0"/>
+        <point x="154.0" y="480.0"/>
+        <point x="1300.0" y="480.0"/>
+        <point x="1300.0" y="347.0"/>
+      </bendpoints>
     </element>
-    <element uuid="2a1e63b3-a8b6-4964-933d-bf2e1c4ed08d" manual="true">
-      <element uuid="acb7a5af-bd80-451c-ae1a-9b0b5f8e8863" manual="true">
+    <element uuid="f6ee6366-c70f-4950-8429-86bfbbf3ec1b" manual="true">
+      <element uuid="95b3bd8c-401a-46f8-863d-0f974ac6f9fd" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -24,9 +31,12 @@
         <seg>connection</seg>
         <seg>iot_processor_bus</seg>
       </bo>
+      <bendpoints>
+        <point x="144.0" y="92.0"/>
+      </bendpoints>
     </element>
-    <element uuid="273daffd-d077-48e7-a63c-00801d77cf35" manual="true">
-      <element uuid="1d56a1e9-6c90-497c-a378-7d77c9267d25" manual="true">
+    <element uuid="1c7ea362-3e8b-4277-9ed9-450535c2bd69" manual="true">
+      <element uuid="99b4af09-6b64-439e-bcb6-0f5e8a16c233" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -37,12 +47,12 @@
         <seg>moisture_sensor_battery_level_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1186.0" y="251.0"/>
-        <point x="1186.0" y="89.0"/>
+        <point x="660.0" y="352.0"/>
+        <point x="660.0" y="322.0"/>
       </bendpoints>
     </element>
-    <element uuid="3f02d571-eb0f-42bb-a184-59d3e1be387f" manual="true">
-      <element uuid="e765d314-bfd1-4b4d-8e95-bc8b5be03c74" manual="true">
+    <element uuid="8d28bca3-8cf6-46d1-bc55-71e5426a6c66" manual="true">
+      <element uuid="7f2a3b26-25ed-4e3a-ace9-2424c2b93a4a" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -53,12 +63,13 @@
         <seg>moisture_sensor_bus</seg>
       </bo>
       <bendpoints>
-        <point x="720.0" y="674.0"/>
-        <point x="1595.0" y="674.0"/>
+        <point x="148.0" y="112.0"/>
+        <point x="164.0" y="112.0"/>
+        <point x="164.0" y="402.0"/>
       </bendpoints>
     </element>
-    <element uuid="65cfdfd2-c13a-45e8-9f10-808bf3b40c51" manual="true">
-      <element uuid="4f89bafc-22a3-47d2-918b-1c00b3c508ab" manual="true">
+    <element uuid="2cc107c9-1734-445e-99b9-5163498ef22d" manual="true">
+      <element uuid="04e0810f-ad9f-49c9-a104-2207a98a4e06" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -69,13 +80,12 @@
         <seg>moisture_sensor_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1139.0" y="351.0"/>
-        <point x="1139.0" y="316.0"/>
-        <point x="1139.0" y="189.0"/>
+        <point x="660.0" y="452.0"/>
+        <point x="660.0" y="422.0"/>
       </bendpoints>
     </element>
-    <element uuid="8978e720-9141-4be9-9f75-d19c93e22b83" manual="true">
-      <element uuid="e7a95d01-e160-43cb-a267-391af8188c70" manual="true">
+    <element uuid="b6f7a701-4f24-4f35-9b8b-0fd57a09a7c9" manual="true">
+      <element uuid="c946032e-0b96-4ced-a94b-9ea063e695ed" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -86,12 +96,12 @@
         <seg>moisture_sensor_state_conn</seg>
       </bo>
       <bendpoints>
-        <point x="1164.0" y="301.0"/>
-        <point x="1164.0" y="139.0"/>
+        <point x="660.0" y="402.0"/>
+        <point x="660.0" y="372.0"/>
       </bendpoints>
     </element>
-    <element uuid="4927b50c-afc2-4f23-a7ad-3d5e4da8c571" manual="true">
-      <element uuid="6578ed34-ffe5-476d-b27d-d705b77d8403" manual="true">
+    <element uuid="a4a6c376-0198-4830-ba92-0a50595c7288" manual="true">
+      <element uuid="15455e42-39dd-479e-afef-3be6bd6b35ca" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -101,13 +111,9 @@
         <seg>connection</seg>
         <seg>ph_sensor_battery_level_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="477.0" y="210.0"/>
-        <point x="477.0" y="89.0"/>
-      </bendpoints>
     </element>
-    <element uuid="7ff74abc-9136-48f0-b6b2-6777cf29d295" manual="true">
-      <element uuid="5eac7826-ac52-4e4c-b05e-ad0e2e4505d7" manual="true">
+    <element uuid="15de07b6-2e12-47f5-9623-6249949167b9" manual="true">
+      <element uuid="918c6ba6-e3a5-43e4-9ecf-5e95c363dfae" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -118,12 +124,13 @@
         <seg>ph_sensor_bus</seg>
       </bo>
       <bendpoints>
-        <point x="719.0" y="411.0"/>
-        <point x="315.0" y="411.0"/>
+        <point x="148.0" y="102.0"/>
+        <point x="174.0" y="102.0"/>
+        <point x="174.0" y="222.0"/>
       </bendpoints>
     </element>
-    <element uuid="5460a014-ce9f-4f32-a42a-8ee95995ff36" manual="true">
-      <element uuid="3f0e0f0c-9881-4900-b619-0c45d066dd18" manual="true">
+    <element uuid="0fac9ab9-2dba-427d-b201-251879bba73c" manual="true">
+      <element uuid="c4ffc97a-08ef-4e62-be6f-d832c30b84f5" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -133,13 +140,9 @@
         <seg>connection</seg>
         <seg>ph_sensor_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="520.0" y="260.0"/>
-        <point x="520.0" y="139.0"/>
-      </bendpoints>
     </element>
-    <element uuid="d5f4e8d7-70e7-4e6a-9f4e-b601788caea3" manual="true">
-      <element uuid="bac9035d-3410-4638-b691-d6f0a0db8bb9" manual="true">
+    <element uuid="4ed29229-acb0-4dc7-a7f1-86f6651f7a68" manual="true">
+      <element uuid="1a76b65e-6caa-4832-94c7-94e5708173e2" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -149,13 +152,9 @@
         <seg>connection</seg>
         <seg>ph_sensor_state_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="563.0" y="310.0"/>
-        <point x="563.0" y="192.0"/>
-      </bendpoints>
     </element>
-    <element uuid="7663f4ac-ffa0-48e7-a09f-a7117b1f026c" manual="true">
-      <element uuid="97ed7633-77e5-4fe9-bd41-80284a01332b" manual="true">
+    <element uuid="b83938c9-1876-4228-b72c-68a1bf7f9db1" manual="true">
+      <element uuid="f8392eb9-4062-4237-8d72-10ee99261970" manual="true">
         <bo>
           <seg>tag</seg>
           <seg>unidirectional</seg>
@@ -165,121 +164,118 @@
         <seg>connection</seg>
         <seg>sensor_controller_conn</seg>
       </bo>
-      <bendpoints>
-        <point x="920.0" y="523.0"/>
-      </bendpoints>
     </element>
-    <element uuid="f3c93802-6d51-4876-851a-c65f29b5c7d2" manual="true">
+    <element uuid="9ddab064-99a8-437a-9590-46948d3ba44b" manual="true">
       <bo>
         <seg>subcomponent</seg>
         <seg>bus_conn</seg>
       </bo>
-      <position x="640.0" y="610.0"/>
+      <position x="12.0" y="70.0"/>
       <size width="120.0" height="50.0"/>
     </element>
-    <element uuid="6faefcdc-610c-4e19-8cb4-307b3eaf7875" manual="true">
-      <element uuid="c8771302-a0ff-41cd-81be-1e0ea713ef52" manual="true" dockArea="left">
+    <element uuid="e32a2e7f-8e69-4887-9ca0-4018758ba2e0" manual="true">
+      <element uuid="e9e1fc49-e1a4-4ed4-b8af-9139af714235" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>bus_access</seg>
         </bo>
-        <position y="82.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="62db5563-b054-4dba-adaa-4caad51e1178" manual="true" dockArea="left">
+      <element uuid="24050672-19ce-4df4-b253-1848d579aa22" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>get_data</seg>
         </bo>
-        <position y="21.0"/>
+        <position y="10.0"/>
       </element>
-      <element uuid="35171bf9-4405-445c-b9ca-bd542e4ae4c3" manual="true" dockArea="right">
+      <element uuid="6042a089-406e-43cb-bf6f-af759cba261e" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>post_data</seg>
         </bo>
-        <position x="224.0" y="82.0"/>
+        <position y="110.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>iot_device</seg>
       </bo>
-      <position x="1070.0" y="520.0"/>
+      <position x="1298.0" y="243.0"/>
       <size width="303.0" height="160.0"/>
     </element>
-    <element uuid="baac0f1a-52bd-4860-a2ec-f767eb1ddb58" manual="true">
-      <element uuid="f65652f4-92b8-4d8b-b227-45a4586faa67" manual="true" dockArea="right">
+    <element uuid="f988c15b-e799-4684-a550-19582880c9b0" manual="true">
+      <element uuid="623cbd74-fa20-47e6-86da-7412effb067c" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>bus_access</seg>
         </bo>
-        <position x="233.0" y="22.0"/>
+        <position y="10.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>iot_processor</seg>
       </bo>
-      <position x="120.0" y="580.0"/>
-      <size width="322.0" height="80.0"/>
+      <position x="172.0" y="38.0"/>
+      <size width="322.0" height="60.0"/>
     </element>
-    <element uuid="42a1457e-551c-45c7-9ce5-120db449db74" manual="true">
-      <element uuid="1cec506a-ddcd-4378-b8d3-eee2c7c0daef" manual="true" dockArea="left">
+    <element uuid="70484b2f-49ca-4b60-aa1a-6978ff3c467b" manual="true">
+      <element uuid="960362e4-9e2d-44ac-86f5-815414c8ccf5" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>battery_state</seg>
         </bo>
-        <position y="1.0"/>
+        <position x="367.0" y="10.0"/>
       </element>
-      <element uuid="95cdcae3-ff0e-41c5-9987-14a7d7d66820" manual="true" dockArea="bottom">
+      <element uuid="1f266326-334a-4dd9-9ec0-21107b13cd4c" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>bus_access</seg>
         </bo>
-        <position x="280.0" y="136.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="587308c1-f309-44cf-bfc4-c7fd6dfd723a" manual="true" dockArea="left">
+      <element uuid="f311c70e-8149-4df7-a3a6-5e16e520f16d" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>moisture_level_read</seg>
         </bo>
-        <position y="101.0"/>
+        <position x="315.0" y="110.0"/>
       </element>
-      <element uuid="6766ae11-191c-4a32-8aab-a899fc90a39e" manual="true" dockArea="left">
+      <element uuid="30e1a0d7-3e63-4ad7-8b30-4b453d930e39" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>sensor_state</seg>
         </bo>
-        <position y="51.0"/>
+        <position x="370.0" y="60.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>moisture_sensor</seg>
       </bo>
-      <position x="1198.0" y="268.0"/>
+      <position x="172.0" y="298.0"/>
       <size width="466.0" height="160.0"/>
     </element>
-    <element uuid="f5170557-2c19-4a9e-9e20-fcb5f9b7c518" manual="true">
-      <element uuid="feaacc2d-2c88-4706-8d6b-b0c92eeacf03" manual="true" dockArea="right">
+    <element uuid="3105f762-89e6-416f-b219-f50a2f18374a" manual="true">
+      <element uuid="9cd5ffda-96d8-40fc-81af-8b00b88d8a9b" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>battery_state</seg>
         </bo>
         <position x="241.0" y="10.0"/>
       </element>
-      <element uuid="0eb97f3d-c7c0-4815-be0a-1015cddc2ce0" manual="true" dockArea="bottom">
+      <element uuid="3eeb28f0-e21f-44fc-b8e0-fe23459e30df" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>bus_access</seg>
         </bo>
-        <position x="110.0" y="136.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="bfb5bc4e-a37f-424f-ac82-bfa15175e4f4" manual="true" dockArea="right">
+      <element uuid="0d474226-da19-405a-a6ac-b82c3a79426d" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>ph_level_read</seg>
         </bo>
         <position x="232.0" y="60.0"/>
       </element>
-      <element uuid="1ec5d359-e927-406e-98fa-6e341e470776" manual="true" dockArea="right">
+      <element uuid="7aa7fd40-1d7b-4066-abf8-d3e96756176d" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>sensor_state</seg>
@@ -290,72 +286,72 @@
         <seg>subcomponent</seg>
         <seg>ph_sensor</seg>
       </bo>
-      <position x="88.0" y="218.0"/>
+      <position x="267.0" y="118.0"/>
       <size width="340.0" height="160.0"/>
     </element>
-    <element uuid="c4d60844-34b8-43ff-9d08-d60094b6e9fe" manual="true">
-      <element uuid="f20e0e39-30fc-4bae-827d-a04791493232" manual="true" dockArea="right">
+    <element uuid="57ffe500-94de-4a64-9635-2e9519adccfa" manual="true">
+      <element uuid="d2df6c7d-618c-42df-b824-e8b30629cf2a" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>moisture_read</seg>
         </bo>
-        <position x="342.0" y="149.0"/>
+        <position y="260.0"/>
       </element>
-      <element uuid="d823581c-2afb-4304-9d4d-2cd1d3cd3618" manual="true" dockArea="right">
+      <element uuid="2747e826-3baa-4dc8-b638-e42a772956dd" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>moisture_sensor_battery_level</seg>
         </bo>
-        <position x="227.0" y="49.0"/>
+        <position y="160.0"/>
       </element>
-      <element uuid="8e6222e4-d5b0-4999-a7b3-8a4d06d515a3" manual="true" dockArea="right">
+      <element uuid="f034f3a9-f3a4-4f56-b550-90dc1adf61ca" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>moisture_sensor_state</seg>
         </bo>
-        <position x="287.0" y="99.0"/>
+        <position y="210.0"/>
       </element>
-      <element uuid="4bb95715-beec-4233-9835-902d31f00a50" manual="true" dockArea="left">
+      <element uuid="c5952f2b-83c0-4124-84c8-679d3b26c43c" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>ph_read</seg>
         </bo>
-        <position y="99.0"/>
+        <position y="60.0"/>
       </element>
-      <element uuid="3b7e4789-b84c-4361-8fa0-ada1fed657c7" manual="true" dockArea="left">
+      <element uuid="32eadab6-af33-4099-8593-207e926b114f" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>ph_sensor_battery_level</seg>
         </bo>
-        <position y="49.0"/>
+        <position y="10.0"/>
       </element>
-      <element uuid="4151b077-c7d5-43b7-9351-7fdeb1190ece" manual="true" dockArea="left">
+      <element uuid="3ed1ce02-3583-4844-b6ee-d8ea551d8fa4" manual="true" dockArea="left">
         <bo>
           <seg>feature</seg>
           <seg>ph_sensor_state</seg>
         </bo>
-        <position y="152.0"/>
+        <position y="110.0"/>
       </element>
-      <element uuid="4716477a-8908-447c-99c0-fe8f15adf789" manual="true" dockArea="bottom">
+      <element uuid="d1d78c6f-e864-461d-9b5c-54343c5a3418" manual="true" dockArea="right">
         <bo>
           <seg>feature</seg>
           <seg>push_sensor_data</seg>
         </bo>
-        <position x="152.0" y="187.0"/>
+        <position x="488.0" y="135.0"/>
       </element>
       <bo>
         <seg>subcomponent</seg>
         <seg>sensor_controller</seg>
       </bo>
-      <position x="608.0" y="58.0"/>
-      <size width="451.0" height="211.0"/>
+      <position x="658.0" y="118.0"/>
+      <size width="620.0" height="310.0"/>
     </element>
     <bo>
       <seg>classifier</seg>
       <seg>iotembeddedsystem.with_devices</seg>
     </bo>
-    <position x="20.0" y="-50.0"/>
-    <size width="1704.0" height="769.0"/>
+    <position x="12.0" y="12.0"/>
+    <size width="1613.0" height="481.0"/>
   </element>
   <config type="structure" connectionPrimaryLabelsVisible="false">
     <enabledAadlProperties/>

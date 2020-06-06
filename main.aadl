@@ -1,20 +1,237 @@
-package main
+package syst
 public
-	with app_server; -- IMPORT
-	with iot; -- IMPORT
 
 -- CROP MAINTANANCE SYSTEM ARCHITECTURE
-	system CropMaintananceSystem
-	end CropMaintananceSystem;
+ 
+system CropMaintananceSystem
+end CropMaintananceSystem;
+system implementation CropMaintananceSystem.with_devices
+	subcomponents
+		iot_sub_system: system IOTEmbeddedSystem.with_devices;
+		main_server_sub_system: system MainServerSystem.with_devices;
+		bus_conn: bus HWConnection;
+end CropMaintananceSystem.with_devices;
 
-	system implementation CropMaintananceSystem.with_devices
-		subcomponents
-			iot_sub_system: system iot::IOTEmbeddedSystem.with_devices;
-			app_server_sub_system: system app_server::ApplicationServerSystem.with_devices;
---			bus_conn: bus iot::HWConnection; -- DISABLED : TEMPORARILY
-			
-	end CropMaintananceSystem.with_devices;
-	
-	
-	
-end main;
+
+
+system MainServerSystem
+end MainServerSystem;
+system implementation MainServerSystem.with_devices
+	subcomponents
+		application_server: device ApplicationServer;
+		database_server: device DatabaseServer;
+		app_server_controller: process AppServerController;
+		db_server_controller: process DBServerController;
+		bus_conn: bus HWConnection;
+		iot_device: device IOTDevice;
+		app_server_processor: processor AppServerProcessor;
+		db_server_processor: processor DBServerProcessor;
+		
+	connections
+		app_server_controller_get_data_conn: port database_server.data_out -> app_server_controller.db_data_reader;
+		app_server_controller_get_event_conn: port database_server.event_listner_out -> app_server_controller.db_event_response;
+		app_server_controller_post_data_conn: port app_server_controller.post_data -> application_server.get_data;
+		app_server_controller_post_event_conn: port app_server_controller.post_event -> application_server.get_event;
+		
+		db_server_controller_write_data: port application_server.write_sensor_data -> db_server_controller.db_data_writter;
+		db_server_controller_write_log: port application_server.write_sensor_state_log -> db_server_controller.db_log_writter;
+		db_server_controller_write_notifications: port application_server.write_notifications -> db_server_controller.db_notification_handler;
+		db_server_controller_event_emmiter: port application_server.invoke_db_procedure -> db_server_controller.db_event_listner;
+		db_server_controller_post_data: port db_server_controller.db_post_data -> database_server.get_data;
+		db_server_controller_post_event: port db_server_controller.db_post_event -> database_server.event_listner_in;
+		
+		sensor_data_conn: port iot_device.post_data -> app_server_controller.get_sensor_data;
+		sensor_state_conn: port iot_device.post_data -> app_server_controller.get_sensor_state;
+		sensor_battery_conn: port iot_device.post_data -> app_server_controller.get_sensor_battery_level;	
+		
+		app_server_processor_bus: bus access bus_conn -> app_server_processor.bus_access;
+		db_server_processor_bus: bus access bus_conn -> db_server_processor.bus_access;
+		
+		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
+		app_server_bus: bus access bus_conn -> application_server.bus_access;
+		db_server_bus: bus access bus_conn -> database_server.bus_access;
+end MainServerSystem.with_devices;
+
+
+
+
+system IOTEmbeddedSystem
+end IOTEmbeddedSystem;
+system implementation IOTEmbeddedSystem.with_devices
+	subcomponents
+		iot_device: device IOTDevice;
+		moisture_sensor: device MoistureSensor;
+		ph_sensor: device PHSensor;
+		sensor_controller: process SensorController;
+		iot_processor: processor IOTProcessor;
+		bus_conn: bus HWConnection;
+	connections
+		sensor_controller_conn: port sensor_controller.push_sensor_data -> iot_device.get_data;
+		moisture_sensor_conn: port moisture_sensor.moisture_level_read -> sensor_controller.moisture_read;
+		ph_sensor_conn: port ph_sensor.ph_level_read -> sensor_controller.ph_read;
+		moisture_sensor_state_conn: port moisture_sensor.sensor_state -> sensor_controller.moisture_sensor_state;
+		ph_sensor_state_conn: port ph_sensor.sensor_state -> sensor_controller.ph_sensor_state;
+		moisture_sensor_battery_level_conn: port moisture_sensor.battery_state -> sensor_controller.moisture_sensor_battery_level;
+		ph_sensor_battery_level_conn: port ph_sensor.battery_state -> sensor_controller.ph_sensor_battery_level;
+		
+		iot_processor_bus: bus access bus_conn -> iot_processor.bus_access;
+		moisture_sensor_bus: bus access bus_conn -> moisture_sensor.bus_access;
+		ph_sensor_bus: bus access bus_conn -> ph_sensor.bus_access;	
+		iot_device_bus: bus access bus_conn -> iot_device.bus_access;
+end IOTEmbeddedSystem.with_devices;
+
+
+
+-- SERVER CONTROLLERS
+device ApplicationServer
+	features
+		get_data: in event port;
+		get_event: in event port;
+		write_sensor_data: out event port;
+		write_sensor_state_log: out event port;
+		write_notifications: out event port;
+		invoke_db_procedure: out event port;
+		bus_access: requires bus access HWConnection;
+end ApplicationServer;
+device implementation ApplicationServer.impl
+end ApplicationServer.impl;
+
+
+device DatabaseServer
+	features
+		get_data: in event port;
+		event_listner_in: in event port;
+		data_out: out event port;
+		event_listner_out: out event port;
+		bus_access: requires bus access HWConnection;
+end DatabaseServer;
+device implementation DatabaseServer.impl
+end DatabaseServer.impl;
+
+
+
+-- IOT DEVICE CONTROLLERS
+device IOTDevice
+	features
+		get_data: in event port;
+		post_data: out event port;
+		bus_access: requires bus access HWConnection;
+end IOTDevice;
+device implementation IOTDevice.impl
+end IOTDevice.impl;
+
+
+-- PROCESSOR CONTROLLERS
+process SensorController
+	features
+		moisture_read: in event port;
+		ph_read: in event port;
+		moisture_sensor_state: in event port;
+		ph_sensor_state: in event port;
+		moisture_sensor_battery_level: in event port;
+		ph_sensor_battery_level: in event port;
+		push_sensor_data: out event port;
+end SensorController;
+process implementation SensorController.with_threads
+end SensorController.with_threads;
+
+
+process AppServerController
+	features
+		get_sensor_data: in event port;
+		get_sensor_state: in event port;
+		get_sensor_battery_level: in event port;
+		db_data_reader: in event port;
+		db_event_response: in event port;
+		post_data: out event port;
+		post_event: out event port;
+end AppServerController;
+process implementation AppServerController.with_threads
+end AppServerController.with_threads;
+
+
+process DBServerController
+	features
+		db_data_writter: in event port;
+		db_log_writter: in event port;
+		db_notification_handler: in event port;
+		db_event_listner: in event port;
+		db_post_data: out event port;
+		db_post_event: out event port;
+end DBServerController;
+process implementation DBServerController.with_threads
+end DBServerController.with_threads;
+
+
+
+-- IOT PROCESSOR IMPLEMENTATION
+processor IOTProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end IOTProcessor;
+processor implementation IOTProcessor.impl
+	subcomponents
+		iot_ram: memory IOTRAM;
+end IOTProcessor.impl;
+memory IOTRAM
+end IOTRAM;
+
+
+-- APPLICATION SERVER PROCESSOR IMPLEMENTATION
+processor AppServerProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end AppServerProcessor;
+processor implementation AppServerProcessor.impl
+	subcomponents
+		app_server_ram: memory AppServerRAM;
+end AppServerProcessor.impl;
+memory AppServerRAM
+end AppServerRAM;
+
+
+
+-- DATABASE SERVER PROCESSOR IMPLEMENTATION
+processor DBServerProcessor
+	features
+		bus_access: requires bus access HWConnection;
+end DBServerProcessor;
+processor implementation DBServerProcessor.impl
+	subcomponents
+		db_server_ram: memory DBServerRAM;
+end DBServerProcessor.impl;
+memory DBServerRAM
+end DBServerRAM;
+
+
+
+-- DATA BUS DEFINITION
+bus HWConnection
+end HWConnection;
+bus implementation HWConnection.impl
+end HWConnection.impl;
+
+
+
+-- SENSOR CONTROLLERS
+device MoistureSensor
+	features
+		moisture_level_read: out event port;
+		sensor_state: out event port;
+		battery_state: out event port;
+		bus_access: requires bus access HWConnection;
+end MoistureSensor;
+device implementation MoistureSensor.impl
+end MoistureSensor.impl;
+
+device PHSensor
+	features
+		ph_level_read: out event port;
+		sensor_state: out event port;
+		battery_state: out event port;
+		bus_access: requires bus access HWConnection;
+end PHSensor;
+device implementation PHSensor.impl
+end PHSensor.impl;
+
+end syst;
